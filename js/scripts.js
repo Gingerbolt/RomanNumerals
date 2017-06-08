@@ -9,34 +9,51 @@ $(document).ready(function() {
     $("#result").show()
     var resultcomment = ""
     var warningcomment = ""
-    var usernumber = $("input#usernumber").val()
-    if (parseInt(usernumber) >= 4000 || parseInt(usernumber) <= 0) {
+    var usernumber = parseInt($("input#usernumber").val())
+    var userstring = usernumber.toString()
+    var tensplace = ((userstring.length) - 2)
+    if (usernumber >= 4000 ||   usernumber <= 0) {
       warningcomment = "Number invalid; Roman numerals only count from 1 to 3,999."
       $("#result").hide()
-    } else if (parseInt(usernumber) >= 1000 && parseInt(usernumber) < 2000) {
+    } else if (usernumber >= 1000 && usernumber < 2000) {
       resultcomment = resultcomment + "M"
-    } else if (parseInt(usernumber) >= 2000 && parseInt(usernumber) < 3000) {
+    } else if (usernumber >= 2000 && usernumber < 3000) {
       resultcomment = resultcomment + "MM"
-    } else if (parseInt(usernumber) >= 3000 && parseInt(usernumber) < 4000) {
+    } else if (  usernumber >= 3000 &&   usernumber < 4000) {
       resultcomment = resultcomment + "MMM"
     }
-    if ((parseInt(usernumber) >= 900 && parseInt(usernumber) < 1000) || (parseInt(usernumber) >= 1900 && parseInt(usernumber) < 2000) || (parseInt(usernumber) >= 2900 && parseInt(usernumber) <3000) || (parseInt(usernumber) >= 3900 && parseInt(usernumber) < 4000)) {
+    if ((  usernumber >= 900 &&   usernumber < 1000) || (  usernumber >= 1900 &&   usernumber < 2000) || (  usernumber >= 2900 &&   usernumber <3000) || (  usernumber >= 3900 &&   usernumber < 4000)) {
       resultcomment = resultcomment + "CM"
     }
-    if ((parseInt(usernumber) >= 800 && parseInt(usernumber) < 900) || (parseInt(usernumber) >= 1800 && parseInt(usernumber) < 1900) || (parseInt(usernumber) >= 2800 && parseInt(usernumber) < 2900) || (parseInt(usernumber) >= 3800 && parseInt(usernumber) < 3900)) {
+    if ((  usernumber >= 800 &&   usernumber < 900) || (  usernumber >= 1800 &&   usernumber < 1900) || (  usernumber >= 2800 &&   usernumber < 2900) || (  usernumber >= 3800 &&   usernumber < 3900)) {
       resultcomment = resultcomment + "DCCC"
     }
-    if ((parseInt(usernumber) >= 700 && parseInt(usernumber) < 800) || (parseInt(usernumber) >= 1700 && parseInt(usernumber) < 1800) || (parseInt(usernumber) >= 2700 && parseInt(usernumber) < 2800) || (parseInt(usernumber) >= 3700 && parseInt(usernumber) < 3800)) {
+    if ((  usernumber >= 700 &&   usernumber < 800) || (  usernumber >= 1700 &&   usernumber < 1800) || (  usernumber >= 2700 &&   usernumber < 2800) || (  usernumber >= 3700 &&   usernumber < 3800)) {
       resultcomment = resultcomment + "DCC"
     }
-    if ((parseInt(usernumber) >= 600 && parseInt(usernumber) < 700) || (parseInt(usernumber) >= 1600 && parseInt(usernumber) < 1700) || (parseInt(usernumber) >= 2600 && parseInt(usernumber) < 2700) || (parseInt(usernumber) >= 3600 && parseInt(usernumber) < 3700)) {
+    if ((  usernumber >= 600 &&   usernumber < 700) || (  usernumber >= 1600 &&   usernumber < 1700) || (  usernumber >= 2600 &&   usernumber < 2700) || (  usernumber >= 3600 &&   usernumber < 3700)) {
       resultcomment = resultcomment + "DC"
     }
-    if ((parseInt(usernumber) >= 500 && parseInt(usernumber) < 600) || (parseInt(usernumber) >= 1500 && parseInt(usernumber) < 1600) || (parseInt(usernumber) >= 2500 && parseInt(usernumber) < 2600) || (parseInt(usernumber) >= 3500 && parseInt(usernumber) < 3600)) {
+    if ((  usernumber >= 500 &&   usernumber < 600) || (  usernumber >= 1500 &&   usernumber < 1600) || (  usernumber >= 2500 &&   usernumber < 2600) || (  usernumber >= 3500 &&   usernumber < 3600)) {
       resultcomment = resultcomment + "D"
     }
-    if ((parseInt(usernumber) >= 4400 && parseInt(usernumber) < 500) || (parseInt(usernumber) >= 1400 && parseInt(usernumber) < 1500) || (parseInt(usernumber) >= 2400 && parseInt(usernumber) < 2500) || (parseInt(usernumber) >= 3400 && parseInt(usernumber) < 3500)) {
+    if ((  usernumber >= 400 &&   usernumber < 500) || (  usernumber >= 1400 &&   usernumber < 1500) || (  usernumber >= 2400 &&   usernumber < 2500) || (  usernumber >= 3400 &&   usernumber < 3500)) {
       resultcomment = resultcomment + "CD"
+    }
+    if ((  usernumber >= 300 &&   usernumber < 400) || (  usernumber >= 1300 &&   usernumber < 1400) || (  usernumber >= 2300 &&   usernumber < 2400) || (  usernumber >= 3300 &&   usernumber < 3400)) {
+      resultcomment = resultcomment + "CCC"
+    }
+    if ((  usernumber >= 200 &&   usernumber < 300) || (  usernumber >= 1200 &&   usernumber < 1300) || (  usernumber >= 2200 &&   usernumber < 2300) || (  usernumber >= 3200 &&   usernumber < 3300)) {
+      resultcomment = resultcomment + "CC"
+    }
+    if ((  usernumber >= 100 &&   usernumber < 200) || (  usernumber >= 1100 &&   usernumber < 1200) || (  usernumber >= 2100 &&   usernumber < 2200) || (  usernumber >= 3100 &&   usernumber < 3200)) {
+      resultcomment = resultcomment + "C"
+    }
+    if (userstring.charAt(tensplace) == 9) {
+      resultcomment = resultcomment + "XC"
+    }
+    if (userstring.charAt(tensplace) == 8) {
+      resultcomment = resultcomment + "LXXX"
     }
 
     $("#result").text(resultcomment)
