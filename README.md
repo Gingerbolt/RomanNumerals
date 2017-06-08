@@ -19,14 +19,14 @@ _{Project can be located at: <a href=https://github.com/RenRall/RomanNumerals> R
 
 ## Specs
 
-_must reject numbers above 3999_
-_must reject negative numbers_
-_must not accept non-numerical symbols_
-_must return clear error message for any failed input conditions_
-_must return appropriate roman numerals for thousand's place_
-_must return appropriate roman numerals for hundred's place_
-_must return appropriate roman numerals for ten's place_
-_must return appropriate roman numerals for one's place_
+_<li> must reject numbers above 3999 </li>_
+_<li> must reject negative numbers </li>_
+_<li> must not accept non-numerical symbols </li>_
+_<li> must return clear error message for any failed input conditions </li>_
+_<li> must return appropriate roman numerals for thousand's place </li>_
+_<li> must return appropriate roman numerals for hundred's place </li>_
+_<li> must return appropriate roman numerals for ten's place </li>_
+_<li> must return appropriate roman numerals for one's place </li>_
 
 ## Support and contact details
 
