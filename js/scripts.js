@@ -1,17 +1,13 @@
-// var romanNumerals = function(roman) {
-//   if (("I" === "1" && "V" === "5" && "X" === "10"))
-// }
-
-
 $(document).ready(function() {
   $("form#submissionform").submit(function(event) {
     event.preventDefault();
-    $("#result").show()
-    var resultcomment = ""
-    var warningcomment = ""
-    var usernumber = parseInt($("input#usernumber").val())
-    var userstring = usernumber.toString()
-    var tensplace = ((userstring.length) - 2)
+    var usernumber = parseInt($("input#usernumber").val());
+    var userstring = usernumber.toString();
+    var tensplace = ((userstring.length) - 2);
+    var onesplace = ((userstring.length) - 1);
+    $("#result").show();
+    var resultcomment = "";
+    var warningcomment = "" ;
     if (usernumber >= 4000 ||   usernumber <= 0) {
       warningcomment = "Number invalid; Roman numerals only count from 1 to 3,999."
       $("#result").hide()
@@ -55,9 +51,57 @@ $(document).ready(function() {
     if (userstring.charAt(tensplace) == 8) {
       resultcomment = resultcomment + "LXXX"
     }
+    if (userstring.charAt(tensplace) == 7) {
+      resultcomment = resultcomment + "LXX"
+    }
+    if (userstring.charAt(tensplace) == 6) {
+      resultcomment = resultcomment + "LX"
+    }
+    if (userstring.charAt(tensplace) == 5) {
+      resultcomment = resultcomment + "L"
+    }
+    if (userstring.charAt(tensplace) == 4) {
+      resultcomment = resultcomment + "XL"
+    }
+    if (userstring.charAt(tensplace) == 3) {
+      resultcomment = resultcomment + "XXX"
+    }
+    if (userstring.charAt(tensplace) == 2) {
+      resultcomment = resultcomment + "XX"
+    }
+    if (userstring.charAt(tensplace) == 1) {
+      resultcomment = resultcomment + "X"
+    }
+    if (userstring.charAt(onesplace) == 9) {
+      resultcomment = resultcomment + "IX"
+    }
+    if (userstring.charAt(onesplace) == 8) {
+      resultcomment = resultcomment + "VIII"
+    }
+    if (userstring.charAt(onesplace) == 7) {
+      resultcomment = resultcomment + "VII"
+    }
+    if (userstring.charAt(onesplace) == 6) {
+      resultcomment = resultcomment + "VI"
+    }
+    if (userstring.charAt(onesplace) == 5) {
+      resultcomment = resultcomment + "V"
+    }
+    if (userstring.charAt(onesplace) == 4) {
+      resultcomment = resultcomment + "IV"
+    }
+    if (userstring.charAt(onesplace) == 3) {
+      resultcomment = resultcomment + "III"
+    }
+    if (userstring.charAt(onesplace) == 2) {
+      resultcomment = resultcomment + "II"
+    }
+    if (userstring.charAt(onesplace) == 1) {
+      resultcomment = resultcomment + "I"
+    }
 
-    $("#result").text(resultcomment)
-    $("#warning").text(warningcomment)
+    $("#result").text(resultcomment);
+    $("#warning").text(warningcomment);
 
   });
 });
