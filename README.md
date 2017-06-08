@@ -15,28 +15,22 @@ _{This page serves to convert numbers into roman numerals}_
 3. Open index.html in preferred browser.
 4. Commit often.
 
-_{Project can be located at: <a href=https://github.com/RenRall/RomanNumerals> Rena's github </a>}_
+_{Project can be located at: <a href=https://github.com/RenRall/RomanNumerals> Rena's github</a> <a href=https://github.com/Gingerbolt/RomanNumerals> Steve's github</a>}_
 
 ## Specs
 
-_must return user input
-_must ignore symbols and numbers
-_must identify words separately
-_return word with -way added to end if begins with vowel
-_return word that starts with one or more consonants moving all first _consonants to end.
-_return above word adding -ay to end.
-
-
-__
-
-
-## Known Bugs
-
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
+_must reject numbers above 3999_
+_must reject negative numbers_
+_must not accept non-numerical symbols_
+_must return clear error message for any failed input conditions_
+_must return appropriate roman numerals for thousand's place_
+_must return appropriate roman numerals for hundred's place_
+_must return appropriate roman numerals for ten's place_
+_must return appropriate roman numerals for one's place_
 
 ## Support and contact details
 
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+_For further information or error reporting send messages to mailto:steve@spitz.com or mailto:renarallis@msn.com _
 
 ## Technologies Used
 
